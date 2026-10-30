@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #card1{
+            width:100px;
+            height:60px;
+            border:4px solid red;
+        }
+        #card2{
+            width:100px;
+            height:60px;
+            border:4px solid red;
+        }
+        #card3{
+            width:100px;
+            height:60px;
+            border:4px solid red;
+        }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Planet Cards</h1>
+<button onclick ="showPlanets()">Show info</button>
+   <div id ="card1"></div>
+   <div id ="card2"></div>
+   <div id ="card3"></div>
+   <script>
+        class Planet {
+            constructor(name, fact) {
+                this.name = name;
+                this.fact = fact;
+            }
+            describe() {
+                return this.name + ": " + this.fact;
+            }
+        }
+        function showPlanets(){
+        let p1 = new Planet ("Earth", "The only planet with life");
+        let p2 = new Planet ("Mars", "Known as the Red Planet");
+        let p3 = new Planet ("Saturn", "Has rings made of ice");  
+        
+    document.getElementById("card1").innerHTML = p1.describe()
+    document.getElementById("card2").innerHTML = p2.describe()
+    document.getElementById("card3").innerHTML = p3.describe()
+}
+    </script>
+</body>
+</html>         
